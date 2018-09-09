@@ -1,0 +1,47 @@
+<!-- <p>
+  notifications works!
+</p> -->
+
+<div *ngIf="notifications && notifications.length" class="notifications">
+  <div *ngFor="let notification of notifications" class="notification {{notification.typeText}} {{notification.cssClass}}"
+  [@removeNotification]="notification.isHidden">
+
+    <a class="close" data-dismiss="alert" (click)="removeNotification(notification.id)">x</a>
+    <!-- <a *ngIf="notification.type != notificationType.Request" 
+      class="close" data-dismiss="alert" (click)="removeNotification(notification.id)">x</a> -->
+
+      <!-- <span>
+        {{notification.head}}{{notification.head && notification.message ? ': ' : ''}}
+        {{notification.message}}
+      </span> -->
+      <div class="inlineBlock notificationIcon">
+          <i [class]="notification.icon"></i>
+      </div>
+
+      <div class="inlineBlock notificationContainer">
+          <div class="notificationData">
+          
+              <span class="notificationHead">{{notification.head}}</span>
+              <span class="notificationMessage">{{notification.message}}</span>
+    
+              <span *ngIf="notification.additionalAttributes" class="notificationMessage block">
+                Request from <span class="notificationHead">{{notification.additionalAttributes.name}}</span>
+              </span>
+          </div>
+    
+          <!-- <br *ngIf="notification.type == notificationType.Request"/> -->
+          <div class="requestBtnsContainer" 
+          *ngIf="notification.type == notificationType.Request && notification.additionalAttributes">
+              <a class="notifyBtn reject" data-dismiss="alert" 
+              (click)="requestRejected(notification.additionalAttributes.id)">
+                <i class="fa fa-times"></i>
+              </a>
+    
+              <a class="notifyBtn accept" data-dismiss="alert" 
+              (click)="requestAccepted(notification.additionalAttributes.id)">
+              <i class="fa fa-check"></i>
+              </a>
+          </div>
+      </div>
+  </div>
+</div>

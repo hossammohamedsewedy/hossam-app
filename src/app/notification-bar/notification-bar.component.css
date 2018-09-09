@@ -1,0 +1,238 @@
+.sideBar{
+    /* display: none; */
+    background-color: #CFD8DC;
+    width: 320px;
+    position: absolute;
+    z-index: 12;
+    padding: 5px;
+    right: 0;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #607D8B;
+}
+
+.notifications{
+    position: relative;
+    right: 0;
+    width: 90%;
+    padding-right: 20px;
+    /* padding-bottom: 20px; */
+    margin-right: 20px;
+    z-index: 10;
+}
+
+.notification{
+    /* background-color: #42e012; */
+    width: 100%;
+    color: #000;
+    /* padding: 5px; */
+    /* border-radius: 5px; */
+    /* margin-bottom: 5px; */
+    /* min-height: 30px; */
+    box-sizing: content-box !important ;
+
+
+    padding: 8px 20px 8px 14px;
+    /* margin-bottom: 10px; */
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    /* border: 1px solid #fbeed5; */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* .notification:hover{
+    background-color: #9db3bd;
+} */
+
+.notification:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.notificationContainer{
+    width: 82%;
+}
+
+.notificationData{
+    width: 100%;
+}
+
+.notification .notificationHead{
+    font-weight: bold;
+}
+
+.notification .notificationEnvelope{
+    width: 6%;
+    vertical-align: top;
+}
+
+.notification .notificationEnvelope:hover{
+    cursor: pointer;
+}
+
+/* ---------- icons ------------------- */
+
+.notificationIcon{
+    width: 8%;
+    vertical-align: top;
+}
+
+/* ---------- close button ------------ */
+
+.notification .close {
+    position: relative;
+    top: 0;
+    right: 0;
+    line-height: 18px;
+    margin-right: -10px;
+}
+
+.notification .close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.notification .close:hover {
+    color: #000000;
+    text-decoration: none;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: pointer;
+}
+
+/* --------- notification types ------ */
+
+.notification.request{
+    /* background-color: #d9edf7; */
+    /* border-color: #bce8f1; */
+    color: #3a87ad;
+}
+
+.notification.success{
+    color: #468847;
+    /* background-color: #dff0d8; */
+    /* border-color: #d6e9c6; */
+}
+
+.notification.warn{
+    color: #b37710;
+    /* background-color: #fdeea2; */
+    /* border: 1px solid #faf0bf; */
+}
+
+.notification.error{
+    /* background-color: #f2dede; */
+    /* border-color: #eed3d7; */
+    color: #b94a48;
+}
+
+.notification.info{
+    /* background-color: #d8d8d8; */
+    /* border-color: #dddddd; */
+    color: #464646;
+}
+
+/* --------- request buttons ------ */
+
+.notification.request .requestBtnsContainer{
+    margin-left: 80%;
+    display: inline;
+}
+
+.notification.request .notifyBtn{
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    width: 11px;
+    height: 13px;
+    line-height: 1.3;
+    border-radius: 100%;
+    opacity: 0.75;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.notification.request .notifyBtn:hover{
+    opacity: 1;
+}
+
+.notification.request .accept{
+    background-color: #39AD64;
+}
+
+.notification.request .accept:hover{
+    background-color: #28b85d;
+}
+
+.notification.request .reject{
+    background-color: #DE3B12;
+}
+
+.notification.request .reject:hover{
+    background-color: #fa4113;
+}
+
+.settings{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0px;
+    color: #666;
+}
+.settings:hover{
+    color: #333;
+    cursor: pointer;
+    background-color: #9db3bd;
+}
+
+.noNotifications{
+    padding: 5px;
+    color: #666;
+}
+
+/* ---------------- unread ---------------- */
+
+.envelope{
+    position: relative;
+    float: right;
+    opacity: 0.7;
+}
+
+.envelope:hover{
+    opacity: 1;
+}
+
+.unread{
+    color: firebrick;
+}
+
+.read{
+    color: #464646;
+}
+
+/* ================== Common ===================== */
+
+.block{
+    display: block;
+}
+
+.inlineBlock{
+    display: inline-block;
+}
+
+.none{
+    display: none;
+}
+
+/* .glyphicon-one-fine-red-dot:before {
+    content:"\25cf";
+    color: firebrick;
+    font-size: 25px;
+    line-height: 0.5;
+} */

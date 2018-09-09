@@ -1,0 +1,53 @@
+<!-- <p>
+  hero-detail works!
+</p> -->
+
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <!-- <ul>
+    <li>Id: {{hero.id}}</li>
+    <li>Name: {{hero.name}}</li>
+    <li>Health Points: {{hero.healthPoints}}</li>
+    <li>Attack: {{hero.attack}}</li>
+    <li>Defence: {{hero.defence}}</li>
+    <li>Speed: {{hero.speed}}</li>
+  </ul> -->
+
+  <table class="greyGridTable">
+    <tr>
+      <th colspan="2">Details</th>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{hero.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{hero.name}}</td>
+    </tr>
+    <tr>
+      <td>Health Points</td>
+      <td>{{hero.healthPoints}}</td>
+    </tr>
+    <tr>
+      <td>Attack</td>
+      <td>{{hero.attack}}</td>
+    </tr>
+    <tr>
+      <td>Defence</td>
+      <td>{{hero.defence}}</td>
+    </tr>
+    <tr>
+      <td>Speed</td>
+      <td>{{hero.speed}}</td>
+    </tr>
+  </table>
+
+  <label>Name:
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </label>
+</div>
+
+<button (click)="goBack()">go back</button>
+
+<button (click)="save()">save</button>

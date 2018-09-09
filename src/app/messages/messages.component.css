@@ -1,0 +1,30 @@
+.messages
+{
+    /* background-color: #abf8d4; */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.messages h2
+{
+    color: red;
+}
+
+.clear
+{
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    font-family: Arial;
+  }
+   
+  button:hover {
+    background-color: #cfd8dc;
+  }

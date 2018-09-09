@@ -1,0 +1,61 @@
+<!-- <p>
+  notification-bar works!
+</p> -->
+
+<div *ngIf="notificationBarData.showNotificationBar" class="sideBar" 
+[@toggleNotificationBar]="notificationBarData.showNotificationBar">
+
+  <div *ngIf="notificationBarData.notifications && notificationBarData.notifications.length; else noNotifications" 
+  class="notifications">
+
+    <div *ngFor="let notification of notificationBarData.notifications; let last = last" 
+    class="notification {{notification.typeText}} {{notification.cssClass}}">
+
+      <!-- <a class="close" data-dismiss="alert" (click)="removeNotification(notification.id)">x</a> -->
+
+      <div class="inlineBlock notificationIcon">
+        <i [class]="notification.icon"></i>
+        <!-- <i *ngIf="!notification.isRead" class="glyphicon-one-fine-red-dot"></i> -->
+      </div>
+
+      <div class="inlineBlock notificationContainer">
+        <div class="notificationData">
+
+          <span class="notificationHead">{{notification.head}}</span>
+          <span class="notificationMessage">{{notification.message}}</span>
+
+          <span *ngIf="notification.additionalAttributes" class="notificationMessage block">
+            Request from
+            <span class="notificationHead">{{notification.additionalAttributes.name}}</span>
+          </span>
+        </div>
+
+        <div class="requestBtnsContainer" *ngIf="notification.type == notificationType.Request && notification.additionalAttributes">
+          <a class="notifyBtn reject" data-dismiss="alert" (click)="requestRejected(notification.additionalAttributes.id)">
+            <i class="fa fa-times"></i>
+          </a>
+
+          <a class="notifyBtn accept" data-dismiss="alert" (click)="requestAccepted(notification.additionalAttributes.id)">
+            <i class="fa fa-check"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="inlineBlock notificationEnvelope" (click)="markAsRead(notification.id)">
+        <i class="envelope" [ngClass]="!notification.isRead ? 'fa fa-envelope unread' : 'fa fa-envelope-open read'"></i>
+      </div>
+
+      <hr *ngIf="!last">
+    </div>
+  </div>
+
+  <ng-template #noNotifications>
+    <div class="noNotifications">No notifications found.</div>
+  </ng-template>
+
+  <hr>
+
+  <div class="settings" (click)="viewSettings()">
+    Settings
+  </div>
+</div>

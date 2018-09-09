@@ -1,0 +1,44 @@
+<!-- <p>
+  heroes-league works!
+</p> -->
+
+<div>
+  <h2>League Groups</h2>
+
+  <!-- <table *ngIf="heroesLeague && heroesLeague.length" class="greyGridTable league">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Soldiers Count</th>
+    </tr>
+    <tr *ngFor="let group of heroesLeague">
+      <td>{{group.id}}</td>
+      <td>{{group.name}}</td>
+      <td>
+        <span *ngFor="let recruits of group.recruits">{{recruits.type}}s: {{recruits.count}}</span>
+      </td>
+    </tr>
+  </table> -->
+
+  <div *ngFor="let group of heroesLeague" class="league">
+    <h3>
+      <span>Id: {{group.id}}</span>
+      <span>Name: {{group.name}}</span>
+    </h3>
+
+    <!-- <h3>
+      Id: {{group.id}} - Name: {{group.name}}
+    </h3> -->
+
+    <table class="greyGridTable">
+      <tr>
+        <th>Recruits</th>
+        <th>Count</th>
+      </tr>
+      <tr *ngFor="let recruits of group.recruits">
+        <td>{{recruits.type}}</td>
+        <td>{{recruits.count}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

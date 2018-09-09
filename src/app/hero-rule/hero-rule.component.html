@@ -1,0 +1,26 @@
+<!-- <p>
+  hero-rule works!
+</p> -->
+
+<div>
+    <h2>Rules</h2>
+
+    <!-- <ul class="heroesRules">
+        <li *ngFor="let heroRule of heroesRules">
+          <span class="badge">{{heroRule.id}}</span> {{heroRule.rule}}
+        </li>
+      </ul> -->
+
+      <table *ngIf="heroesRulesByHero && heroesRulesByHero.length" class="greyGridTable">
+        <tr>
+            <th>Id</th>
+            <th>Hero</th>
+            <th>Rule</th>
+        </tr>
+        <tr *ngFor="let heroRule of heroesRulesByHero" (click)="redirect(heroRule.heroId)">
+          <td>{{heroRule.id}}</td>
+          <td>{{heroRule.heroName}}</td>
+          <td>{{heroRule.rule}}</td>
+        </tr>
+      </table>
+</div>

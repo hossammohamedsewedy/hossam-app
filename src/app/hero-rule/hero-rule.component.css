@@ -1,0 +1,37 @@
+table.greyGridTable {
+    border: 2px solid #FFFFFF;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    /* border-radius: 25px; */
+    background: #EBEBEB ;
+    /* border-bottom: 4px solid #333333; */
+    color: #444;
+  }
+  table.greyGridTable td, table.greyGridTable th {
+    border: 1px solid #FFFFFF;
+    padding: 3px 4px;
+    height: 25px;
+  }
+  table.greyGridTable td {
+    font-size: 13px;
+  }
+
+  table.greyGridTable tr:hover td{
+      background-color: #edfa77;
+      cursor: pointer;
+  }
+
+  table.greyGridTable tr:nth-child(even) {
+    background: #9bb59c5c;
+  }
+  table.greyGridTable th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+  }
+
+  table.greyGridTable tr:first-child{
+    background-color: #566d62;
+  }
